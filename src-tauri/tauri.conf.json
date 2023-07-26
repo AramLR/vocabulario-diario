@@ -16,6 +16,12 @@
       "shell": {
         "all": false,
         "open": true
+      },
+      "http": {
+        "all": false,
+        "request": true,
+        "scope": ["https://es.wiktionary.org/w/api.php?action=query&list=random&rnnamespace=0&rnlimit=1&format=json",
+      "http://api.wordreference.com/0.8/80143/json/esen/*"]
       }
     },
     "bundle": {
