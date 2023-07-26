@@ -12,11 +12,29 @@ async function getRandomWord() {
     })
   ).data
 
-  const quote =
+  const word =
     res.query.random[0]
       .title
 
-  return quote
+  return word
 }
 
-export { getRandomWord }
+async function getMeaning(
+  word: string
+) {
+  const url = `http://api.wordreference.com/0.8/80143/json/esen/${word}`
+
+  const res = (
+    await fetch(url, {
+      method: 'GET',
+      timeout: 60
+    })
+  ).data
+
+  return res
+}
+
+export {
+  getRandomWord,
+  getMeaning
+}
